@@ -97,7 +97,7 @@ public class Ball {
 		p.noStroke();
 		p.ellipse(x, y, size, size);
 		
-		//dance();
+		dance();
 	}
 	
 	public void dance(){
