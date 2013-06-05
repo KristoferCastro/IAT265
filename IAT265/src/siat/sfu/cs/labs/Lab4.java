@@ -14,7 +14,7 @@ public class Lab4 extends PApplet{
 	private final int numberOfBalls = 64;
 	
 	// create an array of size 'numberOfBalls' holding Ball objects
-	Ball[] ballArray = new Ball[numberOfBalls];
+	MyBall[] ballArray = new MyBall[numberOfBalls];
 
 	public void setup(){
 		size(FRAME_WIDTH,FRAME_HEIGHT);
@@ -25,7 +25,7 @@ public class Lab4 extends PApplet{
 		for(int i = 0 ; i < ballArray.length; i++){
 			
 			// let's instantiate a Ball in position/index i
-			ballArray[i] = new Ball(this);
+			ballArray[i] = new MyBall(this);
 			
 		}
 	}
@@ -37,12 +37,12 @@ public class Lab4 extends PApplet{
 		
 		for(int i = 0 ; i < ballArray.length; i++){
 			
-			Ball currentBall = ballArray[i];
+			MyBall currentBall = ballArray[i];
 			
 			// handle ball collisions (for each ball, check with every other ball)
 			for(int j = i + 1; j < numberOfBalls; j++){
 				
-				Ball otherBall = ballArray[j];
+				MyBall otherBall = ballArray[j];
 				
 				currentBall.collision(otherBall);
 			}
